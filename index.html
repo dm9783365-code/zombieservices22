@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZOMBIE CHEATS</title>
+    <!-- Website Meta Description -->
+    <meta name="description" content="Dominate your favorite games like Fortnite and Rainbow Six Siege with ZOMBIE CHEATS. Explore our undetectable hacks, spoofers, and powerful tools to get the ultimate competitive edge.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Stripe.js library for front-end integration (Included for future use) -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000000; /* Solid black background */
+            color: #e2e8f0;
+        }
+
+        .hero-section {
+            background-color: #1a0028; /* A dark purple for the hero section */
+        }
+
+        /* Custom gradient for buttons and logo to match user's request */
+        .btn-gradient {
+            background: linear-gradient(90deg, #8b5cf6, #d946ef);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+        }
+
+        .logo-gradient {
+            background: linear-gradient(90deg, #8b5cf6, #d946ef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(to right, #3b82f6, #6b46c1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        .product-card {
+            background: #1a0028; /* Dark purple */
+            border: 1px solid #4c0071; /* A matching purple border */
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-card h3 {
+            color: #d946ef; /* Bright purple for titles */
+        }
+        .product-card ul li {
+            color: #cbd5e0;
+        }
+        .product-card .add-to-cart {
+            background: #d946ef;
+            transition: background-color 0.2s;
+        }
+        .product-card .add-to-cart:hover {
+            background-color: #8b5cf6;
+        }
+
+        .cart-modal-overlay, .product-detail-modal-overlay, .checkout-flow-modal-overlay, .payment-form-modal-overlay, .payment-success-modal-overlay {
+            background-color: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(8px);
+        }
+
+        .modal-content {
+            background-color: #1a0028; /* Dark purple for modals */
+            border: 1px solid #4c0071;
+        }
+
+        .modal-content h3 {
+            color: #d946ef;
+        }
+        
+        /* Custom scrollbar for modals */
+        .modal-content-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .modal-content-scroll::-webkit-scrollbar-track {
+            background: #2d0046;
+            border-radius: 10px;
+        }
+
+        .modal-content-scroll::-webkit-scrollbar-thumb {
+            background: #d946ef;
+            border-radius: 10px;
+        }
+
+        .product-detail-pricing-card {
+            background-color: #2d0046;
+            border: 1px solid #4c0071;
+        }
+        
+        .product-detail-pricing-card button {
+            background: linear-gradient(to right, #d946ef, #8b5cf6);
+        }
+
+        .review-card {
+            background-color: #1a0028;
+            border: 1px solid #4c0071;
+        }
+
+        /* FAQ Section styling */
+        .faq-item {
+            background-color: #1a0028;
+            border: 1px solid #4c0071;
+            transition: background-color 0.2s;
+        }
+        .faq-item:hover {
+            background-color: #2d0046;
+        }
+        .faq-item summary {
+            cursor: pointer;
+            padding: 1rem 1.5rem;
+            font-weight: 600;
+            color: #d946ef;
+            outline: none;
+            user-select: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-item summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: transform 0.2s;
+        }
+        .faq-item[open] summary::after {
+            content: '-';
+            transform: rotate(180deg);
+        }
+        .faq-item-content {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            color: #cbd5e0;
+        }
+
+        /* Style for the temporary down payment message */
+        .temporary-message h3 {
+            background: linear-gradient(90deg, #d946ef, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        .payment-method-card {
+            border: 1px solid #4c0071;
+            background-color: #2d0046;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        .payment-method-card:hover {
+            background-color: #4c0071;
+            transform: translateY(-2px);
+        }
+        .payment-method-card.selected {
+            border-color: #d946ef;
+            box-shadow: 0 0 10px #d946ef;
+        }
+        .payment-method-card button {
+            color: #8b5cf6;
+        }
+        .payment-method-card:hover button {
+            color: #ffffff;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-gray-900 py-4 shadow-lg sticky top-0 z-50 border-b border-gray-700">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <!-- Logo with SVG and gradient to match user's request -->
+            <a href="#" class="flex items-center space-x-2">
+                <span class="text-4xl md:text-5xl font-extrabold logo-gradient">Z</span>
+            </a>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="#hero" class="text-gray-300 hover:text-white transition-colors duration-200">Home</a>
+                <a href="#about-section" class="text-gray-300 hover:text-white transition-colors duration-200">About Us</a>
+                <a href="#products-section" class="text-gray-300 hover:text-white transition-colors duration-200">Products</a>
+                <a href="#reviews" class="text-gray-300 hover:text-white transition-colors duration-200">Reviews</a>
+                <a href="#faq-section" class="text-gray-300 hover:text-white transition-colors duration-200">FAQ</a>
+                <a href="https://discord.gg/2fB9rGsfTu" target="_blank" class="text-gray-300 hover:text-white transition-colors duration-200">Discord</a>
+                <button id="cart-button" class="btn-gradient text-white font-bold py-2 px-6 rounded-full shadow-md transition-all duration-300 transform hover:scale-105">Cart (<span id="cart-count">0</span>)</button>
+            </nav>
+            <a href="#" class="md:hidden text-white text-2xl">
+                <!-- Mobile menu button, could use an icon here -->
+                &#9776;
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section text-center py-24 md:py-32">
+        <div class="container mx-auto px-4 hero-content">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+                Dominate the Competition with Our Premium Cheats
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Gain the unfair advantage you've been looking for with our undetectable and powerful tools for Fortnite, Rainbow Six Siege, and more.
+            </p>
+            <a href="#products-section" class="btn-gradient inline-block text-white font-bold py-3 px-8 rounded-full shadow-md hover:bg-blue-600 transition-all duration-300 transform hover:scale-105">
+                Explore Our Products
+            </a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about-section" class="py-20 md:py-28 bg-[#000000]">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-white mb-4">About Us</h2>
+            <p class="text-lg text-gray-400 max-w-3xl mx-auto mb-8">
+                Welcome to ZOMBIE CHEATS, where we're dedicated to helping you achieve unparalleled success in your favorite games. Our journey began with a simple goal: to provide reliable, secure, and powerful cheats that give our community a real edge. We are a team of passionate developers and gamers who understand the need for performance and discretion.
+            </p>
+            <p class="text-lg text-gray-400 max-w-3xl mx-auto">
+                Every product we offer is meticulously tested and constantly updated to ensure it remains undetectable by the latest anti-cheat technologies. We believe in transparency and user satisfaction, which is why our support is always just a Discord message away. Join us and experience the difference that dedication and expertise can make.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <main id="main-content" class="py-20 md:py-28 bg-[#000000]">
+        <div class="container mx-auto px-4">
+            <div id="products-section" class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Our Top Selling Products</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Discover all of our software and find the perfect one for you.
+                </p>
+            </div>
+
+            <!-- This div will be populated dynamically by JavaScript -->
+            <div id="dynamic-content" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 justify-center">
+            </div>
+        </div>
+    </main>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 md:py-28 bg-[#000000]">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">What Our Users Say</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Hear from our satisfied customers about their experience with our products and support.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Custom Review 1 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"been using for 4 hours already champ in r6 best cheat out there untouched by the anti cheat w cheats this is very easy to use and the owner and helpers are the best"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">R6_Champ</p>
+                            <p class="text-sm text-gray-500">R6 Cheat User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Custom Review 2 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"got the fortnite private and omg its very good easy setup and helpful they were nice fast to give me a key i been playing for 1 week and not touched by easy anti cheat w zombie services and got unreal 86 in 1 day"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">UnrealPlayer86</p>
+                            <p class="text-sm text-gray-500">Fortnite Private User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 1 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"The support team is incredible. I had a minor issue with the setup and they helped me get everything running within minutes. Top-tier service!"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">!mozy</p>
+                            <p class="text-sm text-gray-500">Satisfied Customer</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"this the best there support is the best love it"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">pinkbunnyjay</p>
+                            <p class="text-sm text-gray-500">Fortnite Cheat User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 3 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"Been cheating for 30 mins on this one account got diamond 3 already. zombie super ud super good"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">TSUNANO</p>
+                            <p class="text-sm text-gray-500">Fortnite Cheat User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 4 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"Used for a day and loved it, I'll be buying again."</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">bestierez</p>
+                            <p class="text-sm text-gray-500">Spoofer User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 5 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"The fortnite ultimate cheat is on another level. I've been dominating every lobby I enter. A must-have for anyone serious about winning!"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">Alejito</p>
+                            <p class="text-sm text-gray-500">Fortnite Ultimate User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 6 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"He isnt wrong 😂. The cheats are fantastic, stable, and completely undetectable. Best experience I've had so far."</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">Vedant | NO DMS</p>
+                            <p class="text-sm text-gray-500">Cheat User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 7 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"The permanent spoofer got me un-HWID banned and back into the game. Works like a charm and it's a huge relief!"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">broken heart club</p>
+                            <p class="text-sm text-gray-500">Spoofer User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 8 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"Absolutely loving the new website design and the simplicity of ordering. The Fortnite Private cheat is as good as ever, and the new updates are great."</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">nudy</p>
+                            <p class="text-sm text-gray-500">Long-time Customer</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 9 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"The team behind the scenes is great. Got a question answered instantly and was able to get my cheat running smoothly. Highly recommended!"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">Inspector Bremssur</p>
+                            <p class="text-sm text-gray-500">Satisfied Customer</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- New Review 10 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"The R6 cheats are incredibly discreet and powerful. The setup was quick and easy, and the features are exactly what I needed. No issues at all, highly satisfied! ⭐⭐⭐⭐⭐"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">Sentinel_Six</p>
+                            <p class="text-sm text-gray-500">R6 Cheat User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Review 11 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"I was a bit skeptical at first, but this is the real deal. The customization options are extensive, and it runs without a hitch. It's been a total game-changer for me. ⭐⭐⭐⭐⭐"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">ViperStrike</p>
+                            <p class="text-sm text-gray-500">R6 Cheat User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Review 12 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"This is easily the best R6 cheat I've used. It's clean, reliable, and the support is fantastic. The peace of mind knowing it's well-maintained is invaluable. ⭐⭐⭐⭐⭐"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">Shadow_Operative</p>
+                            <p class="text-sm text-gray-500">R6 Cheat User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Review 13 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"Flawless performance and excellent security. I've had zero issues, and the user interface is simple and clean. The features are all a player could ask for and more. Great job! ⭐⭐⭐⭐⭐"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">GhostRecon_7</p>
+                            <p class="text-sm text-gray-500">R6 Cheat User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Review 14 - Spoofer -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"The permanent spoofer is a must-have! Got me back into the game after a ban with a new account. It works flawlessly and the peace of mind is worth it. Highly recommend if you're in a similar situation."</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">Unbanned_Hero</p>
+                            <p class="text-sm text-gray-500">Spoofer User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Review 15 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"I've bought the R6 cheat, a Fortnite cheat, and a permanent spoofer, and they all work perfectly together! I'm completely undetectable and dominating. Best bundle I've ever made for myself."</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">Alpha_Viking</p>
+                            <p class="text-sm text-gray-500">All Cheats User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Review 16 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"The team at ZOMBIE CHEATS is insane. I had a question about the Fortnite Ultimate and the temp spoofer, and they answered it instantly. Great products and even better support! 👍"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">GamerGuy88</p>
+                            <p class="text-sm text-gray-500">All Cheats User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Review 17 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"I was worried about using cheats, but the security and undetectability of all their products, especially the R6 Crusader and the spoofer, are top-notch. I feel completely safe using their software."</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">ShadowBlade</p>
+                            <p class="text-sm text-gray-500">All Cheats User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Review 18 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"Best cheats on the market, hands down. I've used the Fortnite Private and the R6 cheats, and they both perform flawlessly. The spoofer is also a lifesaver. This is my go-to for everything now. ⭐⭐⭐⭐⭐"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">xKillerZ</p>
+                            <p class="text-sm text-gray-500">All Cheats User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Review 19 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"The R6 Full cheat is a beast, and the permanent spoofer is just icing on the cake. I've been using them both for weeks with no issues. The Discord community is also a huge plus for new users."</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">TopFragger</p>
+                            <p class="text-sm text-gray-500">All Cheats User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Review 20 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"The website is clean and the checkout process is seamless. The products are even better than advertised!"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">zestyboy</p>
+                            <p class="text-sm text-gray-500">Satisfied Customer</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- New Review 21 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"I've been a member for a while and the community is great. The staff is always helpful and the products are top-notch."</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">_Pixel_</p>
+                            <p class="text-sm text-gray-500">Long-time Customer</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- New Review 22 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"I was struggling to get back into Fortnite after a ban, but the perm spoofer fixed everything. Can't thank you enough!"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">DarkKnight77</p>
+                            <p class="text-sm text-gray-500">Spoofer User</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- New Review 23 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"The R6 cheat is very legit and the aimbot is so smooth. People just think I'm a really good player now."</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">R6-Master</p>
+                            <p class="text-sm text-gray-500">R6 Cheat User</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- New Review 24 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"I've tried other providers, but nothing comes close to the quality of ZOMBIE CHEATS. The updates are frequent and it's always working."</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">CodeRedd</p>
+                            <p class="text-sm text-gray-500">Cheat User</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- New Review 25 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"The Fortnite Private cheat is the best bang for your buck. All the features you need and none of the fluff. It's perfect."</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">_NIGHTMARE_</p>
+                            <p class="text-sm text-gray-500">Fortnite Private User</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- New Review 26 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"Amazing customer service. I had a billing question and it was resolved in minutes. The products are great, but the service is what keeps me coming back."</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">EchoFox</p>
+                            <p class="text-sm text-gray-500">Satisfied Customer</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- New Review 27 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"I'm now top fragging in every game with the R6 cheat. It's completely changed how I play the game for the better."</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">SNAKE</p>
+                            <p class="text-sm text-gray-500">R6 Cheat User</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- New Review 28 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"The Fortnite Ultimate cheat is a beast. The features are so powerful, and it's surprisingly easy to set up. I'm a permanent customer now."</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">GamingGod</p>
+                            <p class="text-sm text-gray-500">Fortnite Ultimate User</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- New Review 29 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"My friend recommended this and I'm so glad he did. The products are legit and the community is very helpful."</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">MemeLord</p>
+                            <p class="text-sm text-gray-500">New Customer</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- New Review 30 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"The temp spoofer is a lifesaver. Had a ban on a new PC and this got me back in the action immediately. Will definitely renew."</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">Zz_Player</p>
+                            <p class="text-sm text-gray-500">Spoofer User</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- New Review 31 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"The R6 cheat is so clean and easy to use. The community is great and always has great tips and tricks!"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">EchoFox</p>
+                            <p class="text-sm text-gray-500">R6 Cheat User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Review 32 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"The private server experience is insane! No lag, no queues, just pure fun with my friends. The custom options are a game-changer. Highly recommend! ⭐⭐⭐⭐⭐"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">GhostSniper420</p>
+                            <p class="text-sm text-gray-500">Fortnite Private User</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"I've been using this for a few weeks now and it's been flawless. The stability is incredible, and the community is super helpful. Best decision I've made for my Fortnite experience. ⭐⭐⭐⭐⭐"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">PixelWarrior</p>
+                            <p class="text-sm text-gray-500">Fortnite Private User</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"This service completely revitalized my interest in Fortnite. Being able to customize matches and play privately is exactly what I was looking for. The support team is also top-notch. ⭐⭐⭐⭐⭐"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">LunarLegend</p>
+                            <p class="text-sm text-gray-500">Fortnite Private User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Reviews for Fortnite Ultimate -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"Absolutely mind-blowing! The 'Ultimate' version lives up to its name. The features are comprehensive and the performance is smooth as silk. A must-have for serious players. ⭐⭐⭐⭐⭐"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">CosmicCaster</p>
+                            <p class="text-sm text-gray-500">Fortnite Ultimate User</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"I upgraded to Ultimate and I'm so glad I did. The extra functionality is well worth it, and everything is super easy to use. The constant updates show how much the team cares. ⭐⭐⭐⭐⭐"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">RampageRex</p>
+                            <p class="text-sm text-gray-500">Fortnite Ultimate User</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"This is the most stable and feature-rich tool I've ever used. It's incredibly reliable and the interface is intuitive. It's clear a lot of hard work went into this. ⭐⭐⭐⭐⭐"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">QuantumStriker</p>
+                            <p class="text-sm text-gray-500">Fortnite Ultimate User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Reviews for R6 Cheats -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"The R6 cheats are incredibly discreet and powerful. The setup was quick and easy, and the features are exactly what I needed. No issues at all, highly satisfied! ⭐⭐⭐⭐⭐"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">Sentinel_Six</p>
+                            <p class="text-sm text-gray-500">R6 Cheat User</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"I was a bit skeptical at first, but this is the real deal. The customization options are extensive, and it runs without a hitch. It's been a total game-changer for me. ⭐⭐⭐⭐⭐"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">ViperStrike</p>
+                            <p class="text-sm text-gray-500">R6 Cheat User</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"This is easily the best R6 cheat I've used. It's clean, reliable, and the support is fantastic. The peace of mind knowing it's well-maintained is invaluable. ⭐⭐⭐⭐⭐"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">Shadow_Operative</p>
+                            <p class="text-sm text-gray-500">R6 Cheat User</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"Flawless performance and excellent security. I've had zero issues, and the user interface is simple and clean. The features are all a player could ask for and more. Great job! ⭐⭐⭐⭐⭐"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">GhostRecon_7</p>
+                            <p class="text-sm text-gray-500">R6 Cheat User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Review 30 - Spoofer -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"The permanent spoofer is a must-have! Got me back into the game after a ban with a new account. It works flawlessly and the peace of mind is worth it. Highly recommend if you're in a similar situation."</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">Unbanned_Hero</p>
+                            <p class="text-sm text-gray-500">Spoofer User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Review 31 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"I've bought the R6 cheat, a Fortnite cheat, and a permanent spoofer, and they all work perfectly together! I'm completely undetectable and dominating. Best bundle I've ever made for myself."</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">Alpha_Viking</p>
+                            <p class="text-sm text-gray-500">All Cheats User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Review 32 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"The team at ZOMBIE CHEATS is insane. I had a question about the Fortnite Ultimate and the temp spoofer, and they answered it instantly. Great products and even better support! 👍"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">GamerGuy88</p>
+                            <p class="text-sm text-gray-500">All Cheats User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Review 33 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"I was worried about using cheats, but the security and undetectability of all their products, especially the R6 Crusader and the spoofer, are top-notch. I feel completely safe using their software."</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">ShadowBlade</p>
+                            <p class="text-sm text-gray-500">All Cheats User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Review 34 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"Best cheats on the market, hands down. I've used the Fortnite Private and the R6 cheats, and they both perform flawlessly. The spoofer is also a lifesaver. This is my go-to for everything now. ⭐⭐⭐⭐⭐"</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">xKillerZ</p>
+                            <p class="text-sm text-gray-500">All Cheats User</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Review 35 -->
+                <div class="review-card p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-300 text-lg mb-4">"The R6 Full cheat is a beast, and the permanent spoofer is just icing on the cake. I've been using them both for weeks with no issues. The Discord community is also a huge plus for new users."</p>
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">👤</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">TopFragger</p>
+                            <p class="text-sm text-gray-500">All Cheats User</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section id="faq-section" class="py-20 md:py-28 bg-[#000000]">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Find answers to the most common questions about our products, payments, and support.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-4">
+                <details class="faq-item rounded-2xl overflow-hidden">
+                    <summary>How do I make a payment?</summary>
+                    <div class="faq-item-content pt-4">
+                        <p>Currently, all payments are handled manually through our Discord server. After adding items to your cart and clicking "Checkout," you will be redirected to our Discord where you can open a ticket. Our staff will then guide you through the payment process securely.</p>
+                    </div>
+                </details>
+                <details class="faq-item rounded-2xl overflow-hidden">
+                    <summary>Are your cheats safe to use and undetectable?</summary>
+                    <div class="faq-item-content pt-4">
+                        <p>We take great care to ensure our cheats are constantly updated and remain undetected by game anti-cheat systems. We cannot provide a 100% guarantee against bans, as it's a cat-and-mouse game with anti-cheat developers, but our software is built with advanced security measures to minimize risk.</p>
+                    </div>
+                </details>
+                <details class="faq-item rounded-2xl overflow-hidden">
+                    <summary>What is a spoofer, and do I need one?</summary>
+                    <div class="faq-item-content pt-4">
+                        <p>A spoofer changes your PC's hardware ID (HWID), which can get you un-banned from games. If you've been banned before, a spoofer will allow you to play on a new account without getting instantly banned again. Our temp spoofer is good for temporary use, while the permanent spoofer provides a long-lasting solution.</p>
+                    </div>
+                </details>
+                <details class="faq-item rounded-2xl overflow-hidden">
+                    <summary>How do I get help if I have a problem?</summary>
+                    <div class="faq-item-content pt-4">
+                        <p>Our dedicated support team is available on our Discord server. Simply open a ticket, and a staff member will assist you with any questions or issues you may have regarding setup, usage, or payments.</p>
+                    </div>
+                </details>
+                 <details class="faq-item rounded-2xl overflow-hidden">
+                    <summary>How do I receive my product after purchase?</summary>
+                    <div class="faq-item-content pt-4">
+                        <p>Once your payment is confirmed on our Discord, a staff member will provide you with a key and instructions on how to download and set up your product. All products are delivered instantly upon successful payment.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail Modal -->
+    <div id="product-detail-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center product-detail-modal-overlay">
+        <div class="modal-content-scroll bg-gray-900 rounded-3xl p-8 max-w-3xl w-full mx-4 my-8 overflow-y-auto" style="max-height: 90vh;">
+            <div id="product-detail-content">
+                <!-- Content will be rendered here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center cart-modal-overlay">
+        <div class="modal-content rounded-2xl p-8 max-w-lg w-full mx-4 shadow-xl">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-3xl font-bold text-white">Your Cart</h3>
+                <button id="close-cart-modal" class="text-gray-400 hover:text-white text-3xl">&times;</button>
+            </div>
+            <div id="cart-items" class="space-y-4">
+                <!-- Cart items will be rendered here -->
+            </div>
+            <div id="cart-footer" class="mt-6 pt-4 border-t border-gray-700 flex justify-between items-center">
+                <p class="text-xl font-bold text-white">Total: <span id="cart-total" class="text-blue-500">$0.00</span></p>
+                <!-- This button will now open the new checkout flow modal -->
+                <button id="checkout-button" class="btn-gradient text-white font-bold py-3 px-8 rounded-full transition-colors duration-200">Checkout</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- New Checkout Flow Modal -->
+    <div id="checkout-flow-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center checkout-flow-modal-overlay">
+        <div class="modal-content rounded-2xl p-8 max-w-lg w-full mx-4 shadow-xl">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-3xl font-bold text-white">Complete your order</h3>
+                <button id="close-checkout-flow-modal" class="text-gray-400 hover:text-white text-3xl">&times;</button>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- Delivery Email Section -->
+                <div>
+                    <label for="delivery-email" class="block text-gray-400 mb-2">Delivery Email</label>
+                    <input type="email" id="delivery-email" placeholder="Enter your email address" class="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+                    <p class="text-sm text-gray-500 mt-1">* Enter the email address where you want your product to be sent. You will receive the invoice in your email.</p>
+                </div>
+
+                <!-- Referral Code Section -->
+                <div>
+                    <label for="referral-code" class="block text-gray-400 mb-2">Referral Code</label>
+                    <input type="text" id="referral-code" placeholder="Enter the referral code" class="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <p class="text-sm text-gray-500 mt-1">Referred by someone? Type their referral code in here.</p>
+                </div>
+                
+                <!-- Order Summary Section -->
+                <div class="border-t border-gray-700 pt-6">
+                    <h4 class="text-xl font-bold text-white mb-4">Order Summary</h4>
+                    <div id="checkout-summary" class="space-y-2">
+                        <!-- Summary items will be dynamically added here -->
+                    </div>
+                </div>
+
+                <!-- Payment Method Section -->
+                <div class="border-t border-gray-700 pt-6">
+                    <h4 class="text-xl font-bold text-white mb-4">Choose Payment Method</h4>
+                    <div class="space-y-4">
+                        <div class="payment-method-card p-4 rounded-lg flex justify-between items-center" data-payment-method="card">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-2xl">💳</span>
+                                <p class="font-semibold text-white">Debit/Credit Card</p>
+                            </div>
+                        </div>
+                        <div class="payment-method-card p-4 rounded-lg flex justify-between items-center" data-payment-method="google-pay">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-2xl">💰</span>
+                                <p class="font-semibold text-white">Google Pay</p>
+                            </div>
+                        </div>
+                        <div class="payment-method-card p-4 rounded-lg flex justify-between items-center" data-payment-method="apple-pay">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-2xl"></span>
+                                <p class="font-semibold text-white">Apple Pay</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- New Payment Form Modal -->
+    <div id="payment-form-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center payment-form-modal-overlay">
+        <div class="modal-content rounded-2xl p-8 max-w-lg w-full mx-4 shadow-xl">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-3xl font-bold text-white">Payment Details</h3>
+                <button id="close-payment-form-modal" class="text-gray-400 hover:text-white text-3xl">&times;</button>
+            </div>
+            <div class="space-y-6">
+                <!-- Card details will be rendered here -->
+                <div>
+                    <label for="card-number" class="block text-gray-400 mb-2">Card Number</label>
+                    <input type="text" id="card-number" placeholder="0000 0000 0000 0000" class="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label for="expiry-date" class="block text-gray-400 mb-2">Expiry Date</label>
+                        <input type="text" id="expiry-date" placeholder="MM/YY" class="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    </div>
+                    <div>
+                        <label for="cvc" class="block text-gray-400 mb-2">CVC</label>
+                        <input type="text" id="cvc" placeholder="CVC" class="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    </div>
+                </div>
+                <button id="pay-now-button" class="w-full btn-gradient text-white font-bold py-3 px-8 rounded-full transition-colors duration-200">
+                    Pay <span id="pay-amount">$0.00</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Updated Payment Success Modal (Now a temporary payment down message) -->
+    <div id="payment-success-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center payment-success-modal-overlay">
+        <div class="modal-content rounded-2xl p-8 max-w-lg w-full mx-4 shadow-xl text-center temporary-message">
+            <div class="flex justify-end items-center mb-6">
+                <button id="close-success-modal" class="text-gray-400 hover:text-white text-3xl">&times;</button>
+            </div>
+            <h3 class="text-4xl font-bold mb-4">Payments Down</h3>
+            <p class="text-gray-300 mb-6">Due to technical issues, we are unable to process credit card payments at this time. <br><br> Your card has **NOT** been charged. Please head to our Discord to complete your purchase manually with a staff member.</p>
+            <a href="https://discord.gg/2fB9rGsfTu" target="_blank" class="btn-gradient inline-block text-white font-bold py-3 px-8 rounded-full transition-colors duration-200">
+                Go to Discord
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8">
+        <div class="container mx-auto px-4 text-center text-gray-500">
+            <p>&copy; 2024 ZOMBIE CHEATS. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Data for all products
+        const products = [
+            {
+                id: 'fortnite-private',
+                brand: 'ZOMBIE',
+                name: 'FORTNITE PRIVATE',
+                description: 'Undetected and feature-rich',
+                prices: [
+                    { duration: '1 Day', price: 19.99 },
+                    { duration: '3 Days', price: 29.99 },
+                    { duration: '1 Week', price: 45.99 },
+                    { duration: '1 Month', price: 79.99 },
+                    { duration: 'Lifetime', price: 329.99 }
+                ],
+                color: 'purple'
+            },
+            {
+                id: 'fortnite-ultimate',
+                brand: 'ZOMBIE',
+                name: 'FORTNITE ULTIMATE',
+                description: 'Full feature suite, maximum power',
+                prices: [
+                    { duration: '1 Day', price: 17.99 },
+                    { duration: '3 Days', price: 29.99 },
+                    { duration: '1 Week', price: 39.99 },
+                    { duration: '1 Month', price: 59.99 },
+                    { duration: 'Lifetime', price: 305.99 }
+                ],
+                color: 'purple'
+            },
+            {
+                id: 'r6-full',
+                brand: 'ZOMBIE',
+                name: 'R6 FULL',
+                description: 'Dominate Rainbow Six Siege',
+                prices: [
+                    { duration: '1 Day', price: 31.99 },
+                    { duration: '1 Week', price: 52.99 },
+                    { duration: '1 Month', price: 85.99 }
+                ],
+                color: 'purple'
+            },
+            {
+                id: 'r6-crusader',
+                brand: 'ZOMBIE',
+                name: 'R6 CRUSADER',
+                description: 'A powerful and reliable cheat for Rainbow Six Siege with advanced features.',
+                prices: [
+                    { duration: '1 Day', price: 13.99 },
+                    { duration: '1 Week', price: 35.99 },
+                    { duration: '1 Month', price: 75.99 }
+                ],
+                color: 'purple'
+            },
+            {
+                id: 'perm-spoofer',
+                brand: 'ZOMBIE',
+                name: 'PERM SPOOFER',
+                description: 'Permanent hardware ID spoofer',
+                prices: [
+                    { duration: 'One time', price: 24.99 },
+                    { duration: 'Lifetime', price: 79.99 }
+                ],
+                color: 'purple'
+            },
+            {
+                id: 'temp-spoofer',
+                brand: 'ZOMBIE',
+                name: 'TEMP SPOOFER V2',
+                description: 'Temporary hardware ID spoofer',
+                prices: [
+                    { duration: '1 Day', price: 30.99 },
+                    { duration: '1 Week', price: 47.99 },
+                    { duration: '1 Month', price: 57.99 }
+                ],
+                color: 'purple'
+            }
+        ];
+
+        let cart = [];
+        const dynamicContent = document.getElementById('dynamic-content');
+        const productsSectionTitle = document.getElementById('products-section');
+        const cartButton = document.getElementById('cart-button');
+        const cartModal = document.getElementById('cart-modal');
+        const closeCartModalButton = document.getElementById('close-cart-modal');
+        const cartItemsContainer = document.getElementById('cart-items');
+        const cartTotalSpan = document.getElementById('cart-total');
+        const cartCountSpan = document.getElementById('cart-count');
+        const checkoutButton = document.getElementById('checkout-button');
+
+        // New elements for the updated payment flow
+        const checkoutFlowModal = document.getElementById('checkout-flow-modal');
+        const closeCheckoutFlowModalButton = document.getElementById('close-checkout-flow-modal');
+        const checkoutSummary = document.getElementById('checkout-summary');
+        const paymentMethodCards = document.querySelectorAll('.payment-method-card');
+        const paymentFormModal = document.getElementById('payment-form-modal');
+        const closePaymentFormModalButton = document.getElementById('close-payment-form-modal');
+        const payNowButton = document.getElementById('pay-now-button');
+        const payAmountSpan = document.getElementById('pay-amount');
+        const paymentSuccessModal = document.getElementById('payment-success-modal');
+        const closeSuccessModalButton = document.getElementById('close-success-modal');
+        
+        const productDetailModal = document.getElementById('product-detail-modal');
+        const productDetailContent = document.getElementById('product-detail-content');
+        
+        // Function to update cart display and total
+        function updateCart() {
+            cartItemsContainer.innerHTML = '';
+            let total = 0;
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p class="text-center text-gray-500">Your cart is empty.</p>';
+                checkoutButton.disabled = true;
+                checkoutButton.classList.add('opacity-50', 'cursor-not-allowed');
+            } else {
+                checkoutButton.disabled = false;
+                checkoutButton.classList.remove('opacity-50', 'cursor-not-allowed');
+                cart.forEach((item, index) => {
+                    total += item.price;
+                    const cartItemHtml = `
+                        <div class="flex justify-between items-center bg-gray-800 rounded-lg p-3">
+                            <div>
+                                <p class="font-bold text-white">${item.productName} - ${item.duration}</p>
+                                <p class="text-gray-400">$${item.price.toFixed(2)}</p>
+                            </div>
+                            <button class="text-red-500 hover:text-red-300 font-bold remove-item-button" data-index="${index}">&times;</button>
+                        </div>
+                    `;
+                    cartItemsContainer.innerHTML += cartItemHtml;
+                });
+            }
+            cartTotalSpan.textContent = `$${total.toFixed(2)}`;
+            cartCountSpan.textContent = cart.length;
+        }
+
+        // Function to render the main product grid
+        function renderProductGrid() {
+            document.getElementById('main-content').style.display = 'block';
+            productDetailModal.classList.add('hidden');
+            let html = '';
+            products.forEach(product => {
+                html += `
+                    <div class="bg-gray-800 rounded-2xl p-8 shadow-md product-card transform transition-transform duration-300 hover:scale-[1.02]" data-id="${product.id}">
+                        <h3 class="text-xl font-bold mb-2 text-purple-400">${product.name}</h3>
+                        <p class="text-gray-400">${product.description}</p>
+                    </div>
+                `;
+            });
+            dynamicContent.innerHTML = html;
+
+            // Add event listeners to the new cards
+            document.querySelectorAll('.product-card').forEach(card => {
+                card.addEventListener('click', (e) => {
+                    const id = e.currentTarget.dataset.id;
+                    renderProductDetail(id);
+                });
+            });
+        }
+
+        // Function to render the product detail view (modal)
+        function renderProductDetail(id) {
+            const product = products.find(p => p.id === id);
+            
+            // Generate pricing HTML
+            let pricesHtml = product.prices.map(price => `
+                <div class="bg-gray-800 rounded-xl p-4 relative text-center product-detail-pricing-card">
+                    <p class="text-lg text-gray-400 mb-2">${price.duration}: <span class="font-bold text-xl text-white">$${price.price.toFixed(2)}</span></p>
+                    <button class="add-to-cart btn-primary text-white font-bold py-2 px-6 rounded-full w-full mt-2" data-product-id="${product.id}" data-price-duration="${price.duration}">
+                        Add to Cart
+                    </button>
+                </div>
+            `).join('');
+
+            const html = `
+                <div class="flex justify-between items-center mb-8">
+                    <h3 class="text-3xl font-bold text-white">${product.name}</h3>
+                    <button id="close-product-detail" class="text-gray-400 hover:text-white text-3xl">&times;</button>
+                </div>
+                <div class="text-center mb-8">
+                    <p class="text-gray-400 mb-8">${product.description}</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-white mb-4">Pricing</h4>
+                    <div class="space-y-4 mb-8">${pricesHtml}</div>
+                </div>
+            `;
+            productDetailContent.innerHTML = html;
+            productDetailModal.classList.remove('hidden');
+
+            // Add event listener to close button
+            document.getElementById('close-product-detail').addEventListener('click', () => {
+                productDetailModal.classList.add('hidden');
+            });
+
+
+            // Add 'Add to Cart' button event listeners
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const productId = e.currentTarget.dataset.productId;
+                    const priceDuration = e.currentTarget.dataset.priceDuration;
+                    const product = products.find(p => p.id === productId);
+                    const priceItem = product.prices.find(p => p.duration === priceDuration);
+
+                    cart.push({
+                        productName: product.name,
+                        duration: priceItem.duration,
+                        price: priceItem.price
+                    });
+                    updateCart();
+                    // Optional: show a quick confirmation message
+                    const confirmationMessage = `
+                        <div class="fixed bottom-8 right-8 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg animate-pulse" id="confirmation-toast">
+                            Added ${product.name} to cart!
+                        </div>
+                    `;
+                    document.body.insertAdjacentHTML('beforeend', confirmationMessage);
+                    setTimeout(() => {
+                        const toast = document.getElementById('confirmation-toast');
+                        if (toast) toast.remove();
+                    }, 2000);
+                });
+            });
+        }
+
+        // Event listeners for cart modal
+        cartButton.addEventListener('click', () => {
+            cartModal.classList.remove('hidden');
+            updateCart();
+        });
+
+        closeCartModalButton.addEventListener('click', () => {
+            cartModal.classList.add('hidden');
+        });
+
+        // Event listener for removing items from cart
+        cartItemsContainer.addEventListener('click', (e) => {
+            if (e.target.classList.contains('remove-item-button')) {
+                const index = e.target.dataset.index;
+                cart.splice(index, 1);
+                updateCart();
+            }
+        });
+
+        // Event listener for checkout button to open the checkout flow modal
+        checkoutButton.addEventListener('click', () => {
+            if (cart.length > 0) {
+                cartModal.classList.add('hidden');
+                openCheckoutFlowModal();
+            } else {
+                 cartItemsContainer.innerHTML = '<p class="text-center text-gray-500">Your cart is empty.</p>';
+            }
+        });
+
+        function openCheckoutFlowModal() {
+            // Populate the order summary
+            let subtotal = 0;
+            let summaryHtml = '';
+            cart.forEach(item => {
+                subtotal += item.price;
+                summaryHtml += `
+                    <div class="flex justify-between items-center text-gray-400">
+                        <p>${item.productName} (${item.duration})</p>
+                        <p>$${item.price.toFixed(2)}</p>
+                    </div>
+                `;
+            });
+
+            // For now, payment fee is 0
+            const paymentFee = 0; 
+            const total = subtotal + paymentFee;
+
+            summaryHtml += `
+                <div class="flex justify-between items-center text-gray-400">
+                    <p>Subtotal</p>
+                    <p>$${subtotal.toFixed(2)}</p>
+                </div>
+                <div class="flex justify-between items-center text-gray-400">
+                    <p>Payment method fee</p>
+                    <p>$${paymentFee.toFixed(2)}</p>
+                </div>
+                <div class="flex justify-between items-center font-bold text-white text-xl border-t border-gray-700 pt-2 mt-2">
+                    <p>Total</p>
+                    <p>$${total.toFixed(2)}</p>
+                </div>
+            `;
+            checkoutSummary.innerHTML = summaryHtml;
+            payAmountSpan.textContent = `$${total.toFixed(2)}`;
+            checkoutFlowModal.classList.remove('hidden');
+        }
+
+        // Event listeners for checkout flow modal
+        closeCheckoutFlowModalButton.addEventListener('click', () => {
+            checkoutFlowModal.classList.add('hidden');
+        });
+        
+        // This function will be called by all payment method cards
+        function proceedToPaymentForm() {
+            checkoutFlowModal.classList.add('hidden');
+            paymentFormModal.classList.remove('hidden');
+        }
+        
+        // Event listeners for payment method cards
+        paymentMethodCards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                // Remove the 'selected' class from all cards
+                paymentMethodCards.forEach(c => c.classList.remove('selected'));
+                // Add the 'selected' class to the clicked card
+                e.currentTarget.classList.add('selected');
+                proceedToPaymentForm();
+            });
+        });
+
+        // Event listeners for payment form modal
+        closePaymentFormModalButton.addEventListener('click', () => {
+            paymentFormModal.classList.add('hidden');
+            checkoutFlowModal.classList.remove('hidden');
+        });
+
+        // Event listener to simulate payment
+        payNowButton.addEventListener('click', () => {
+            // In a real application, you would process the payment here with Stripe or another service.
+            // For this demonstration, we'll just show a success message.
+            paymentFormModal.classList.add('hidden');
+            paymentSuccessModal.classList.remove('hidden');
+        });
+
+        // Event listener for payment success modal
+        closeSuccessModalButton.addEventListener('click', () => {
+            paymentSuccessModal.classList.add('hidden');
+        });
+
+
+        // Initial render on page load
+        document.addEventListener('DOMContentLoaded', renderProductGrid);
+
+    </script>
+</body>
+</html>
